@@ -24,7 +24,6 @@ const handleOverlayClosePopup = (evt, popup) => {
     }
 };
 
-/**Слушатели */
 const setCloseEventListeners = (closeButtons) => {
     closeButtons.forEach(button => {
         button.addEventListener('click', () => {

@@ -34,5 +34,12 @@ const validationSettings = {
   errorClass: 'popup__error_visible'
 }
 
+const apiConfig = {
+  link: 'https://mesto.nomoreparties.co/v1/apf-cohort-202/',
+  headers: {
+      authorization: '9b0a04ad-a3db-43b9-af98-012df2114af9',
+      'Content-Type': 'application/json'
+  }
+}
 
-export {initialCards, validationSettings};
+export {initialCards, validationSettings, apiConfig};

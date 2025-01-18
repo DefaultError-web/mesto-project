@@ -1,4 +1,4 @@
-import {validationSettings} from "./сonstants.js";
+import {validationSettings} from "./constants.js";
 
 const showInputError = (formElement, inputElement, errorMessage) => {
     const errorElement = formElement.querySelector(`#input-${inputElement.id}-error`);
@@ -25,7 +25,6 @@ const checkInputValidity = (formElement, inputElement) => {
 const setEventListeners = (formElement) => {
     const inputList = Array.from(formElement.querySelectorAll(validationSettings.inputSelector));
     const buttonElement = formElement.querySelector(validationSettings.submitButtonSelector);
-    // Включаем проверку состояния кнопки на старте
     toggleButtonState(inputList, buttonElement);
     inputList.forEach((inputElement) => {
         inputElement.addEventListener('input', function () {
@@ -35,14 +34,12 @@ const setEventListeners = (formElement) => {
     });
 };
 
-// Проверка наличия невалидных полей
 const hasInvalidInput = (inputList) => {
     return inputList.some((inputElement) => {
         return !inputElement.validity.valid;
     })
 };
 
-// Функция для изменения состояния кнопки отправки
 const toggleButtonState = (inputList, buttonElement) => {
     if (hasInvalidInput(inputList)) {
         buttonElement.classList.add(validationSettings.inactiveButtonClass);
@@ -53,11 +50,9 @@ const toggleButtonState = (inputList, buttonElement) => {
     }
 };
 
-// Функция для включения валидации
 const enableValidation = (validationSettings) => {
     const formList = Array.from(document.querySelectorAll(validationSettings.formSelector));
     formList.forEach((formElement) => {
-        // Устанавливаем слушатели для всех инпутов и проверку состояния кнопки сразу
         setEventListeners(formElement);
     });
 };
