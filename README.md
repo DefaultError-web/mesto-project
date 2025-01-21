@@ -13,4 +13,4 @@
 * Webpack: Для объединения JS и CSS.
 * API: С использованием POST, GET, PUSH и DELETE.
 
-[Проект можно посмотреть тут](https://github.com/DefaultError-web/mesto-project)
+[Проект можно посмотреть тут](https://defaulterror-web.github.io/mesto-project/)
