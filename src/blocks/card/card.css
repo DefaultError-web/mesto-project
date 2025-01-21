@@ -5,7 +5,7 @@
 @import url('__delete-button/card__delete-button.css');
 @import url('__title/card__title.css');
 @import url('__like-area/card__like-area.css');
-@import url('__likes-count/card__likes-count.css');
+@import url('__like-count/card__like-count.css');
 
 .card {
   font-family: 'Inter', Arial, sans-serif;
